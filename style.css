@@ -1,0 +1,364 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,300;1,300&display=swap");
+
+.header-container {
+  height: 60px;
+  display: flex;
+  align-items: center;
+  background: white;
+  width: 68vw;
+  margin: auto;
+  display: flex;
+}
+.header-logo {
+  display: flex;
+  flex: 1;
+}
+.nav {
+  display: flex;
+  align-items: center;
+}
+.nav-group {
+  display: flex;
+  align-items: center;
+  margin: 0 20px;
+  font-family: "Karla", sans-serif;
+}
+.nav-group-item {
+  text-transform: uppercase;
+  display: inline-block;
+  font-size: 14px;
+  padding: 10px 15px;
+  color: rgb(138, 138, 138);
+  cursor: pointer;
+  border: 2px solid transparent;
+}
+.nav-group-item:hover {
+  border: 2px solid hsl(270, 9%, 17%);
+}
+.header-button {
+  color: hsl(270, 9%, 17%);
+  border: 2px solid hsl(270, 9%, 17%) !important;
+  cursor: pointer;
+  z-index: 100;
+}
+.header-button:hover {
+  color: white !important;
+  background: hsl(270, 9%, 17%) !important;
+}
+#button {
+  outline: none;
+  border: 2px solid white;
+  font-weight: 550;
+  padding: 10px 25px;
+  text-transform: uppercase;
+  background: transparent;
+  transition: all 0.2s;
+  cursor: pointer;
+}
+#button:hover {
+  background: white;
+  color: black;
+}
+.top-body {
+  background: hsl(256, 26%, 20%);
+  position: relative;
+}
+#background-design {
+  position: absolute;
+  z-index: 1;
+}
+.top-body-design {
+  width: 20%;
+  right: 0;
+  top: 0;
+}
+.top-body-design-left {
+  left: -60px;
+  bottom: -250px;
+}
+@media (max-width: 768px) {
+  .columns {
+    flex-direction: column;
+  }
+  .col {
+    border-bottom: 1px solid gray;
+    text-align: center;
+    margin-top: 15px;
+  }
+  .col ul {
+    align-items: center;
+  }
+  #background-design {
+    display: none;
+  }
+  .top-text-container {
+    text-align: center;
+  }
+  .top-container-title {
+    font-size: 10vw !important;
+  }
+  .banner {
+    flex-direction: column;
+    text-align: center;
+  }
+  .bottom-container-button {
+    margin-top: 15px;
+  }
+}
+.top-container {
+  max-width: 68vw;
+  margin: auto;
+  display: flex;
+  height: 600px;
+  padding-top: 100px;
+}
+
+.top-container-image {
+  width: 100%;
+}
+.top-container-image img {
+  max-width: 500px;
+  object-fit: contain;
+  width: 100%;
+}
+.top-container-image.mobile {
+  display: none;
+}
+#hamburger,
+#close-icon {
+  display: none;
+}
+.nav-mobile {
+  display: none;
+}
+@media (max-width: 690px) {
+  .nav-mobile.deactive {
+    display: none;
+  }
+  .nav-mobile.active {
+    display: flex;
+    justify-content: center;
+  }
+  .nav-group {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin: 10px 0;
+  }
+  .nav-group-item {
+    border-bottom: 1px solid hsla(270, 2%, 16%, 0.151);
+    width: 100%;
+    display: inline-block;
+    transition: all 0.25s;
+  }
+  .nav-group-item:hover {
+    border-bottom: 1px solid transparent;
+    background: hsl(256, 26%, 20%);
+    color: white;
+    font-weight: 700;
+  }
+  .middle-title h1 {
+    font-size: 2.1rem !important;
+  }
+  #hamburger.active,
+  #close-icon.active {
+    display: block;
+    cursor: pointer;
+    transition: all 0.25s;
+  }
+  #hamburger.deactive,
+  #close-icon.deactive {
+    display: none;
+  }
+  #hamburger:hover,
+  #close-icon:hover {
+    transform: scale(1.02);
+  }
+  .nav {
+    display: none;
+  }
+}
+@media (max-width: 1024px) {
+  .middle-body {
+    padding-top: 50px !important;
+  }
+  .header {
+    padding: 0 15px;
+  }
+  .header-container {
+    width: 100%;
+    margin: none;
+  }
+  .top-container-image.mobile {
+    display: flex;
+  }
+  .top-container-image.mobile img {
+    max-width: 100%;
+  }
+  .top-container-image {
+    display: none;
+  }
+  .top-container {
+    flex-direction: column;
+  }
+  .banner-title {
+    font-size: 1.5rem !important;
+  }
+  .middle-container {
+    text-align: center;
+  }
+  .cards {
+    flex-direction: column;
+    align-items: center;
+  }
+  .card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.top-text-container {
+  color: white;
+  width: 100%;
+  margin-right: 10px;
+}
+.top-container-title {
+  font-family: "DM Serif Display", serif;
+  font-size: 70px;
+  max-width: 500px;
+}
+.top-container-desc {
+  font-family: "Karla", sans-serif;
+  line-height: 30px;
+  max-width: 600px;
+  width: 100%;
+}
+@media (max-width: 1440px) {
+  .top-container-image {
+    width: 100%;
+  }
+}
+.top-container-button {
+  color: white;
+  margin-top: 20px;
+  transition: all 0.2s;
+}
+.bottom-container-button {
+  color: white;
+}
+.middle-body {
+  padding-top: 300px;
+  width: 68vw;
+  margin: auto;
+}
+.middle-title {
+  padding: 30px 0;
+  font-size: 30px;
+  color: hsl(270, 9%, 17%);
+}
+.cards {
+  display: flex;
+  width: 100%;
+}
+.card {
+  font-family: "Karla", sans-serif;
+  width: 400px;
+  margin-right: 15px;
+}
+.card-image {
+  padding: 10px 0;
+}
+.card-title {
+  font-weight: 600;
+  padding: 16px 0;
+}
+.card-desc {
+  color: dimgray;
+  line-height: 20px;
+  font-size: 13px;
+  max-width: 300px;
+  width: 100%;
+}
+.banner {
+  border-radius: 5px;
+  margin-top: 150px;
+  align-items: center;
+  padding: 50px;
+  font-family: "Karla", sans-serif;
+  display: flex;
+  height: 200px;
+  background: hsl(256, 26%, 20%);
+}
+.banner-text {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+.banner-title {
+  color: white;
+  font-size: 3rem;
+}
+
+.socials {
+  margin-top: 150px;
+  display: flex;
+  border-radius: 5px;
+  align-items: center;
+}
+.socials-logo {
+  flex: 1;
+}
+.social-links img {
+  margin: 0 10px;
+}
+.footer-body {
+  width: 68vw;
+  margin: 15px auto;
+  padding: 30px 0;
+  border-top: 1px solid hsla(270, 9%, 17%, 0.5);
+}
+.columns {
+  display: flex;
+  width: 100%;
+}
+.col {
+  width: 100%;
+  font-family: "Karla", sans-serif;
+}
+.col-title {
+  padding: 10px 0;
+  color: dimgray;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+.col ul {
+  display: flex;
+  flex-direction: column;
+  text-transform: uppercase;
+  font-size: 13px;
+}
+.col ul li {
+  display: inline-block;
+  margin: 1px 0;
+  padding: 10px 5px;
+  width: fit-content;
+  cursor: pointer;
+  border: 1px solid transparent;
+  transition: all 0.3s;
+}
+.col ul li:hover {
+  border-radius: 3px;
+  font-weight: 700;
+  color: white;
+  border: 1px solid black;
+  background: hsl(256, 26%, 20%);
+}
